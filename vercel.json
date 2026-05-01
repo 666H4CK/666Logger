@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/send",     "destination": "/api/send"     },
-    { "source": "/messages", "destination": "/api/messages" }
-  ]
-}
