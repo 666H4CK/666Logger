@@ -1,5 +1,3 @@
-import { next } from "@vercel/edge";
-
 // ─── Configuración ────────────────────────────────────────────────────────────
 const API_LIMIT        = 30;   // máx requests por IP en la ventana de tiempo
 const WINDOW_MS        = 60_000; // ventana: 1 minuto
